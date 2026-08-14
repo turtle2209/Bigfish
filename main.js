@@ -58,6 +58,7 @@ const DEFAULT_SETTINGS = {
   notifyOnComplete: true,
   launchAtLogin: false,
   petEnabled: true,
+  petScale: 1,
   onboardingDone: false,
 };
 let settings = { ...DEFAULT_SETTINGS };
@@ -369,15 +370,19 @@ function toggleMainWindow() {
 // ---------------------------------------------------------------------------
 function createPetWindow() {
   if (petWindow && !petWindow.isDestroyed()) { petWindow.show(); return; }
+  // Create a large transparent window; pet is positioned via CSS transform.
+  // This avoids setPosition calls during drag/wander — movement is purely local.
+  const { workAreaSize } = screen.getPrimaryDisplay();
   petWindow = new BrowserWindow({
-    width: 180,
-    height: 200,
+    x: 0, y: 0,
+    width: workAreaSize.width,
+    height: workAreaSize.height,
     transparent: true,
     frame: false,
     alwaysOnTop: true,
     skipTaskbar: true,
     resizable: false,
-    movable: true,
+    movable: false,
     hasShadow: false,
     fullscreenable: false,
     webPreferences: {
@@ -390,6 +395,11 @@ function createPetWindow() {
   petWindow.setAlwaysOnTop(true, 'floating');
   petWindow.setIgnoreMouseEvents(true, { forward: true });
   petWindow.loadFile(path.join(__dirname, 'pet.html'));
+  petWindow.webContents.on('did-finish-load', () => {
+    if (petWindow && !petWindow.isDestroyed()) {
+      petWindow.webContents.send('pet-scale', settings.petScale || 1);
+    }
+  });
   petWindow.on('closed', () => { petWindow = null; });
 }
 
@@ -406,14 +416,12 @@ let petState = 'idle';
 let wanderTimer = null;
 let sleepTimer = null;
 let eatTimer = null;
-let moveTimer = null;
 
 function clearPetTimers() {
   clearTimeout(wanderTimer);
   clearTimeout(sleepTimer);
   clearTimeout(eatTimer);
-  clearInterval(moveTimer);
-  wanderTimer = sleepTimer = eatTimer = moveTimer = null;
+  wanderTimer = sleepTimer = eatTimer = null;
 }
 
 function setPetState(state) {
@@ -450,26 +458,13 @@ function doWander() {
     return;
   }
   const dir = Math.random() < 0.5 ? 'left' : 'right';
-  const [x, y] = petWindow.getPosition();
   const { workAreaSize } = screen.getPrimaryDisplay();
   const distance = 100 + Math.random() * 180;
-  const targetX = dir === 'left' ? x - distance : x + distance;
+  const targetX = dir === 'left' ? petScreenX - distance : petScreenX + distance;
   const clamped = Math.max(0, Math.min(targetX, workAreaSize.width - 220));
   setPetState('walk-' + dir);
-  const startX = x;
-  const startTime = Date.now();
-  const duration = 1400;
-  clearInterval(moveTimer);
-  moveTimer = setInterval(() => {
-    const t = Math.min(1, (Date.now() - startTime) / duration);
-    petWindow.setPosition(Math.round(startX + (clamped - startX) * t), y);
-    if (t >= 1) {
-      clearInterval(moveTimer);
-      moveTimer = null;
-      setPetState('idle');
-      scheduleWander();
-    }
-  }, 16);
+  // Send target to renderer; it handles the animation + calls wander-done when done
+  petWindow.webContents.send('pet-wander', { targetX: clamped, y: petScreenY });
 }
 
 // ---------------------------------------------------------------------------
@@ -656,20 +651,20 @@ if (!gotLock) {
     if (mainWindow) { mainWindow.show(); mainWindow.focus(); }
   });
 
-  // Pet drag + click
-  let petDragStartScreen = null;
-  let petDragStartPos = null;
-  ipcMain.on('pet-drag-start', (_e, { x, y }) => {
-    if (!petWindow) return;
-    petDragStartScreen = { x, y };
-    petDragStartPos = petWindow.getPosition();
+  // Pet position managed via CSS transform in renderer; main process just tracks it
+  let petScreenX = 300; // initial position (updated by renderer)
+  let petScreenY = 300;
+
+  ipcMain.on('pet-init-bounds', (_e, { w, h, petX, petY }) => {
+    petScreenX = petX;
+    petScreenY = petY;
   });
-  ipcMain.on('pet-drag-move', (_e, { x, y }) => {
-    if (!petWindow || !petDragStartScreen || !petDragStartPos) return;
-    petWindow.setPosition(
-      petDragStartPos[0] + (x - petDragStartScreen.x),
-      petDragStartPos[1] + (y - petDragStartScreen.y),
-    );
+  ipcMain.on('pet-sync-position', (_e, { x, y }) => {
+    petScreenX = x;
+    petScreenY = y;
+  });
+  ipcMain.on('pet-wander-done', () => {
+    scheduleWander();
   });
   ipcMain.on('pet-clicked', () => {
     wakePet();
@@ -685,5 +680,9 @@ if (!gotLock) {
     if (petWindow && !petWindow.isDestroyed()) {
       petWindow.setIgnoreMouseEvents(ignore, { forward: true });
     }
+  });
+  ipcMain.on('pet-save-scale', (_e, scale) => {
+    settings.petScale = scale;
+    saveSettings();
   });
 }
