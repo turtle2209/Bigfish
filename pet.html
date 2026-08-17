@@ -11,17 +11,17 @@
       cursor: grab;
     }
     #pet-wrap {
-      width: 220px; height: 210px;
+      width: 250px; height: 270px;
       position: relative;
     }
     #bubble {
-      position: absolute; top: 2px; left: 50%;
+      position: absolute; top: 22px; left: 50%;
       transform: translateX(-50%);
       background: #fff; color: #333;
       padding: 9px 14px; border-radius: 14px;
       font-size: 14px; line-height: 1.5;
       width: max-content;
-      max-width: 200px;
+      max-width: 230px;
       white-space: normal;
       word-break: break-word;
       text-align: center;
@@ -31,12 +31,42 @@
     }
     #bubble.show { display: block; animation: pop .18s ease-out; }
     #pet {
-      position: absolute; bottom: 4px; left: 50%;
+      position: absolute; bottom: 26px; left: 50%;
       transform: translateX(-50%);
-      height: 158px;
+      height: 200px; /* 240x220 帧按比例缩放；待机旧帧由 JS 单独设 140px */
       pointer-events: none;
     }
     #pet.animate-bob { animation: bob 3.2s ease-in-out infinite; }
+    /* 好感度条（紧贴窗口底边） */
+    #affinity {
+      position: absolute; bottom: 2px; left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      z-index: 1;
+    }
+    #affinity-bar {
+      width: 100%; height: 8px;
+      background: rgba(0,0,0,.45);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    #affinity-fill {
+      height: 100%; width: 0%;
+      background: linear-gradient(90deg, #ffb86b, #ff6bcb);
+      border-radius: 999px;
+      transition: width .6s ease;
+    }
+    #affinity-label {
+      font-size: 10px;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,.8);
+      line-height: 1;
+      white-space: nowrap;
+    }
     @keyframes bob {
       0%, 100% { transform: translateX(-50%) translateY(0); }
       50% { transform: translateX(-50%) translateY(-7px); }
@@ -50,6 +80,10 @@
 <body>
   <div id="pet-wrap">
     <div id="bubble"></div>
+    <div id="affinity">
+      <div id="affinity-bar"><div id="affinity-fill"></div></div>
+      <div id="affinity-label">Lv.1 好感 0</div>
+    </div>
     <img id="pet" draggable="false" alt="">
   </div>
   <script src="pet.js"></script>

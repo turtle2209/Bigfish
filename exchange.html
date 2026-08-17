@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>鲸鱼娘兑换屋</title>
+  <style>
+    :root { --bg:#14161c; --panel:#1c1f27; --border:#2a2f3a; --text:#e8eaf0; --dim:#9aa3b2; --accent:#ffb86b; --gold:#ffd166; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font:13px/1.5 "Segoe UI","Microsoft YaHei",sans-serif; padding:14px; }
+    /* 隐藏滚动条（窗口内容刚好放下） */
+    ::-webkit-scrollbar { display:none; }
+    html, body { overflow-y: auto; }
+    h1 { font-size:15px; display:flex; align-items:center; gap:6px; margin-bottom:12px; }
+    .row { display:flex; justify-content:space-between; align-items:center; background:var(--panel); border:1px solid var(--border); border-radius:8px; padding:8px 12px; margin-bottom:8px; }
+    .row .label { color:var(--dim); font-size:12px; }
+    .row .val { font-weight:600; font-size:14px; }
+    .row .val.gold { color:var(--gold); }
+    .btn { background:#262c38; border:1px solid var(--border); color:var(--text); border-radius:8px; padding:7px 12px; cursor:pointer; font-size:13px; width:100%; margin-top:10px; }
+    .btn:hover { background:#2f3644; }
+    .btn:disabled { opacity:.5; cursor:not-allowed; }
+    .divider { height:1px; background:var(--border); margin:14px 0; }
+    .food { display:flex; align-items:center; gap:10px; background:var(--panel); border:1px solid var(--border); border-radius:8px; padding:8px 10px; margin-bottom:8px; }
+    .food .emoji { font-size:20px; }
+    .food .info { flex:1; }
+    .food .name { font-weight:600; }
+    .food .desc { color:var(--dim); font-size:11px; }
+    .food .price { color:var(--gold); font-weight:600; font-size:13px; }
+    .food .buy { background:#2f3644; border:1px solid var(--border); color:#fff; border-radius:6px; padding:5px 12px; cursor:pointer; font-size:12px; }
+    .food .buy:hover { background:#3a4354; }
+    .food .buy:disabled { opacity:.4; cursor:not-allowed; }
+    #msg { margin-top:10px; font-size:12px; min-height:18px; color:var(--accent); text-align:center; }
+    .hint { color:var(--dim); font-size:11px; margin-top:10px; text-align:center; }
+  </style>
+</head>
+<body>
+  <h1>🐳 鲸鱼娘兑换屋</h1>
+
+  <div class="row"><span class="label">累计消耗 token（好感来源）</span><span class="val" id="usage">0</span></div>
+  <div class="row"><span class="label">可兑换 token 余额</span><span class="val" id="tokens">0</span></div>
+  <div class="row"><span class="label">好感度</span><span class="val" id="affinity">Lv.1 · 0 点</span></div>
+  <div class="row"><span class="label">💴 余额</span><span class="val gold" id="currency">0</span></div>
+
+  <button class="btn" id="exchange">兑换 💴</button>
+  <div class="hint" id="rate-hint">1000 token = 1💴</div>
+  <div id="msg"></div>
+
+  <div class="divider"></div>
+  <div class="hint">用 💴 给鲸鱼娘买吃的，喂食也会加好感哦</div>
+
+  <div id="foods"></div>
+  <div class="hint">右键鲸鱼娘随时打开本窗口</div>
+
+  <script src="exchange.js"></script>
+</body>
+</html>

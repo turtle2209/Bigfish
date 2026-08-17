@@ -1,0 +1,535 @@
+{
+  "generatedAt": "2026-08-17T09:06:03.935Z",
+  "source": "awesome-dsh-plugin",
+  "plugins": [
+    {
+      "name": "dsh-pet",
+      "owner": "ysyyhhh",
+      "url": "https://github.com/ysyyhhh/dsh-pet",
+      "page": "https://awesome-dsh-plugin.com/p/ysyyhhh/dsh-pet/",
+      "category": "pet",
+      "description": {
+        "en": "Native desktop pet for DSH that follows agent activity, supports Codex pet packages, and imports approved pets directly from Petdex without its CLI.",
+        "zh": "跟随 agent 状态的 DSH 原生桌宠，兼容 Codex 桌宠包，并可在插件内直接从 Petdex 导入已审核桌宠，无需 Petdex CLI。"
+      },
+      "npm": null,
+      "stars": 0,
+      "install": "dsh plugin --profile web add github:ysyyhhh/dsh-pet",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "whale-girl",
+      "owner": "vlln",
+      "url": "https://github.com/vlln/whale-girl",
+      "page": "https://awesome-dsh-plugin.com/p/vlln/whale-girl/",
+      "category": "pet",
+      "description": {
+        "en": "Desktop pet (QQ-pet style): floats in the corner, draggable, feedable, playable.",
+        "zh": "桌面宠物（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍。"
+      },
+      "npm": null,
+      "stars": 173,
+      "install": "dsh plugin --profile web add github:vlln/whale-girl",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "pet-whale",
+      "owner": "nzl153",
+      "url": "https://github.com/nzl153/pet-whale",
+      "page": "https://awesome-dsh-plugin.com/p/nzl153/pet-whale/",
+      "category": "pet",
+      "description": {
+        "en": "Desktop pet drawn from the official whale outline: pure-SVG animation follows agent state (thinking, working, celebrating, error), with poke and double-click flip interactions, cursor avoidance, 7 palettes, light/dark theme sync, and a playable web preview.",
+        "zh": "官方鲸鱼轮廓的桌宠：纯 SVG 动画随 agent 状态切换（思考／工作／完成／报错），可戳可拖、双击翻滚，光标停留在身侧会自己避让，7 套色板并跟随亮暗主题，附网页预览可直接试玩。"
+      },
+      "npm": "pet-whale",
+      "stars": 2,
+      "install": "dsh plugin --profile web add pet-whale",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-desktop-pet",
+      "owner": "xiaoshihou514",
+      "url": "https://github.com/xiaoshihou514/dsh-desktop-pet",
+      "page": "https://awesome-dsh-plugin.com/p/xiaoshihou514/dsh-desktop-pet/",
+      "category": "pet",
+      "description": {
+        "en": "DSH pet, on the desktop!",
+        "zh": "鲸鱼娘桌宠，桌面端！"
+      },
+      "npm": null,
+      "stars": 6,
+      "install": "dsh plugin --profile web add github:xiaoshihou514/dsh-desktop-pet",
+      "added": "2026-08-16"
+    },
+    {
+      "name": "DeepSeek-Harness-Pet",
+      "owner": "minybear",
+      "url": "https://github.com/minybear/DeepSeek-Harness-Pet",
+      "page": "https://awesome-dsh-plugin.com/p/minybear/DeepSeek-Harness-Pet/",
+      "category": "pet",
+      "description": {
+        "en": "Codex-style desktop pet: a floating animated sprite in the corner that mirrors the agent's running state (working, waiting, failed, done).",
+        "zh": "Codex 风格桌面宠物：右下角悬浮动画精灵，随 agent 运行状态实时变化（工作、等待、报错、完成）。"
+      },
+      "npm": null,
+      "stars": 2,
+      "install": "dsh plugin --profile web add github:minybear/DeepSeek-Harness-Pet",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-codex-pet#dsh-codex-pet",
+      "owner": "skr311",
+      "url": "https://github.com/skr311/dsh-codex-pet/tree/main/packages/dsh-codex-pet",
+      "page": "https://awesome-dsh-plugin.com/p/skr311/dsh-codex-pet--packages-dsh-codex-pet/",
+      "category": "pet",
+      "description": {
+        "en": "Import Codex-style sprite-sheet pets and render them as a floating shell.overlay with a pet library, interactions, and agent-state linkage.",
+        "zh": "导入/上传 Codex 风格精灵图序列帧宠物，在 DSH Web GUI 以悬浮浮层渲染，含图库管理、交互与 Agent 状态联动。"
+      },
+      "npm": "dsh-codex-pet",
+      "stars": 5,
+      "install": "dsh plugin --profile web add dsh-codex-pet",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-emoji",
+      "owner": "hellodigua",
+      "url": "https://github.com/hellodigua/dsh-emoji",
+      "page": "https://awesome-dsh-plugin.com/p/hellodigua/dsh-emoji/",
+      "category": "fun",
+      "description": {
+        "en": "Automatically add emojis to AI replies.",
+        "zh": "为 AI 回复自动添加表情。"
+      },
+      "npm": "dsh-emoji",
+      "stars": 17,
+      "install": "dsh plugin --profile web add dsh-emoji",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-gomoku",
+      "owner": "omdsh-dev",
+      "url": "https://github.com/omdsh-dev/dsh-gomoku",
+      "page": "https://awesome-dsh-plugin.com/p/omdsh-dev/dsh-gomoku/",
+      "category": "fun",
+      "description": {
+        "en": "Play Gomoku against the AI, or let two AIs battle it out.",
+        "zh": "与 AI 下五子棋，也可让 AI 对局比棋力。"
+      },
+      "npm": "@yejiming/dsh-gomoku",
+      "stars": 13,
+      "install": "dsh plugin --profile web add @yejiming/dsh-gomoku",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-stickers",
+      "owner": "william-jin-cmu",
+      "url": "https://github.com/william-jin-cmu/dsh-stickers",
+      "page": "https://awesome-dsh-plugin.com/p/william-jin-cmu/dsh-stickers/",
+      "category": "fun",
+      "description": {
+        "en": "Bidirectional sticker reactions between user and agent.",
+        "zh": "用户与 agent 双向表情贴纸互动。"
+      },
+      "npm": null,
+      "stars": 17,
+      "install": "dsh plugin --profile web add github:william-jin-cmu/dsh-stickers",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-minigames",
+      "owner": "lhh010",
+      "url": "https://github.com/lhh010/dsh-minigames",
+      "page": "https://awesome-dsh-plugin.com/p/lhh010/dsh-minigames/",
+      "category": "fun",
+      "description": {
+        "en": "Side-panel arcade: 18 offline mini-games to play while the model thinks.",
+        "zh": "右侧小游戏面板：18 款离线小游戏，等模型回复时的摸鱼神器。"
+      },
+      "npm": null,
+      "stars": 18,
+      "install": "dsh plugin --profile web add github:lhh010/dsh-minigames",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-whale-arcade",
+      "owner": "jitengfei",
+      "url": "https://github.com/jitengfei/dsh-whale-arcade",
+      "page": "https://awesome-dsh-plugin.com/p/jitengfei/dsh-whale-arcade/",
+      "category": "fun",
+      "description": {
+        "en": "Floating, browser-local whale arcade with three score games and ocean-themed Gomoku for breaks while waiting on the agent.",
+        "zh": "浏览器本地运行的悬浮鲸鱼游戏中心，包含三款积分游戏和海洋主题五子棋，适合等待 Agent 时随手游玩。"
+      },
+      "npm": "dsh-whale-arcade",
+      "stars": 2,
+      "install": "dsh plugin --profile web add dsh-whale-arcade",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "deepseek-manners",
+      "owner": "Moeblack",
+      "url": "https://github.com/Moeblack/deepseek-manners",
+      "page": "https://awesome-dsh-plugin.com/p/Moeblack/deepseek-manners/",
+      "category": "fun",
+      "description": {
+        "en": "Append a thank-you note after every message. Mind your manners.",
+        "zh": "给每次消息后注入感谢语，做个有礼貌的人。"
+      },
+      "npm": null,
+      "stars": 11,
+      "install": "dsh plugin --profile web add github:Moeblack/deepseek-manners",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-expression",
+      "owner": "yyh-001",
+      "url": "https://github.com/yyh-001/dsh-expression",
+      "page": "https://awesome-dsh-plugin.com/p/yyh-001/dsh-expression/",
+      "category": "fun",
+      "description": {
+        "en": "Meme search, the fun way: describe the vibe, and the agent finds and sends a real meme that actually fits.",
+        "zh": "陪 AI 斗图的搞笑插件：说个感觉，AI 帮你搜到、发出那张恰到好处的真实表情包。"
+      },
+      "npm": "dsh-expression",
+      "stars": 4,
+      "install": "dsh plugin --profile web add dsh-expression",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-running-liang",
+      "owner": "skiuniverse",
+      "url": "https://github.com/skiuniverse/dsh-running-liang",
+      "page": "https://awesome-dsh-plugin.com/p/skiuniverse/dsh-running-liang/",
+      "category": "fun",
+      "description": {
+        "en": "A Chrome-dino-style runner for the DeepSeek Harness Web UI: play while the agent replies, score from 梁子 to 梁圣 on a persistent progress strip.",
+        "zh": "等待 Agent 回复时的恐龙快跑小游戏：常驻进度条从「梁子」冲向「梁圣」，折叠即暂停、任意键恢复。"
+      },
+      "npm": "dsh-running-liang",
+      "stars": 0,
+      "install": "dsh plugin --profile web add dsh-running-liang",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "clippy-harness#plugin",
+      "owner": "sjh9714",
+      "url": "https://github.com/sjh9714/clippy-harness/tree/master/plugin",
+      "page": "https://awesome-dsh-plugin.com/p/sjh9714/clippy-harness--plugin/",
+      "category": "fun",
+      "description": {
+        "en": "Clippy is back and this time he can actually help. An office assistant pet that reacts to real agent state, jumps when the turn completes, and opens a classic \"illegal operation\" dialog when a turn fails.",
+        "zh": "回形针助手回来了，这次它真的会干活：会对真实 agent 状态做出反应的办公助手宠物，任务完成时跳起来庆祝，回合失败时弹出经典的 \"illegal operation\" 对话框。"
+      },
+      "npm": "dsh-clippy",
+      "stars": 0,
+      "install": "dsh plugin --profile web add dsh-clippy",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-digipet",
+      "owner": "swaylq",
+      "url": "https://github.com/swaylq/dsh-digipet",
+      "page": "https://awesome-dsh-plugin.com/p/swaylq/dsh-digipet/",
+      "category": "fun",
+      "description": {
+        "en": "Digimon-style raising game: hatch an egg that feeds on real work (turns, tool calls, errors) and evolves along four branching lines shaped by how you work; zero tokens, invisible to the model.",
+        "zh": "数码宝贝式养成：孵一颗吃真实工作长大的蛋（回合、工具调用、报错都是营养），按你的工作方式走四条进化分支；零 token，模型完全看不见。"
+      },
+      "npm": null,
+      "stars": 2,
+      "install": "dsh plugin --profile web add github:swaylq/dsh-digipet",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-output-styles",
+      "owner": "PerryLink",
+      "url": "https://github.com/PerryLink/dsh-output-styles",
+      "page": "https://awesome-dsh-plugin.com/p/PerryLink/dsh-output-styles/",
+      "category": "productivity",
+      "description": {
+        "en": "Runtime-switchable model output styles with Claude Code outputStyles parity: a /style command, per-session persistence over the output_style domain, systemPrompt injection, six built-in styles, custom Markdown/JSON libraries, and a web picker.",
+        "zh": "运行时切换模型输出风格（对标 Claude Code outputStyles）：/style 命令、基于 output_style 域的按会话持久化、systemPrompt 注入、六个内置风格、自定义 Markdown/JSON 风格库与 Web 选择器。"
+      },
+      "npm": "dsh-output-styles",
+      "stars": 3,
+      "install": "dsh plugin --profile web add dsh-output-styles",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-context",
+      "owner": "bowenliang123",
+      "url": "https://github.com/bowenliang123/dsh-context",
+      "page": "https://awesome-dsh-plugin.com/p/bowenliang123/dsh-context/",
+      "category": "productivity",
+      "description": {
+        "en": "Context insight panel: see what the model's context window is made of and how it evolves — composition vs. window size, per-request history, compression/injection events, and per-message token stats.",
+        "zh": "上下文洞察面板：一眼看清模型上下文窗口的组成与变化——构成对照窗口大小、按请求历史趋势、压缩/注入事件、消息级 token 统计。"
+      },
+      "npm": "dsh-context",
+      "stars": 42,
+      "install": "dsh plugin --profile web add dsh-context",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-find-plugin",
+      "owner": "awesome-dsh-plugin",
+      "url": "https://github.com/awesome-dsh-plugin/dsh-find-plugin",
+      "page": "https://awesome-dsh-plugin.com/p/awesome-dsh-plugin/dsh-find-plugin/",
+      "category": "productivity",
+      "description": {
+        "en": "Find plugins without leaving the agent: search this curated registry by keyword or category, with ready-to-run install commands.",
+        "zh": "会话内直接找插件：按关键词/分类搜索本精选 registry，返回描述与可直接执行的安装命令。"
+      },
+      "npm": "dsh-find-plugin",
+      "stars": 28,
+      "install": "dsh plugin --profile web add dsh-find-plugin",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-vision-router",
+      "owner": "ysr666",
+      "url": "https://github.com/ysr666/dsh-vision-router",
+      "page": "https://awesome-dsh-plugin.com/p/ysr666/dsh-vision-router/",
+      "category": "productivity",
+      "description": {
+        "en": "Free vision for text-only agents: built-in keyless vision chain plus pixel tools (Q&A, grounding, crop, pixel diff, colors, OCR, SVG trace, cutout, screenshots); paste an image to use it.",
+        "zh": "为纯文本 Agent 提供视觉能力：内置免 Key 视觉链 + 像素级视觉工具（看图问答、定位、裁剪、像素对比、取色、OCR、矢量化、抠图、截图）；粘贴图片即可用。"
+      },
+      "npm": "dsh-vision-router",
+      "stars": 172,
+      "install": "dsh plugin --profile web add dsh-vision-router",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-mnemon",
+      "owner": "omdsh-dev",
+      "url": "https://github.com/omdsh-dev/dsh-mnemon",
+      "page": "https://awesome-dsh-plugin.com/p/omdsh-dev/dsh-mnemon/",
+      "category": "productivity",
+      "description": {
+        "en": "Cross-agent, local-first persistent memory plugin for DeepSeek Harness (DSH), powered by Mnemon. It shares long-term memory across Mnemon-enabled agents and adds runtime memory, searchable project documents, semantic recall, knowledge graph, and a Sidebar UI.",
+        "zh": "由 Mnemon 驱动的 DeepSeek Harness（DSH）跨 Agent、本地优先的持久记忆插件。它可在支持 Mnemon 的 Agent 之间共享长期记忆，并提供运行时记忆、可检索项目档案、语义召回、知识图谱和 Sidebar UI。"
+      },
+      "npm": "dsh-mnemon",
+      "stars": 33,
+      "install": "dsh plugin --profile web add dsh-mnemon",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-doctor",
+      "owner": "jorinyang",
+      "url": "https://github.com/jorinyang/dsh-doctor",
+      "page": "https://awesome-dsh-plugin.com/p/jorinyang/dsh-doctor/",
+      "category": "productivity",
+      "description": {
+        "en": "DSH environment diagnosis, graded repair with one-click rollback, and a runtime self-healing service.",
+        "zh": "DSH 环境诊断、分级修复与一键回滚，附带运行时自愈服务。"
+      },
+      "npm": "@jorinyang/dsh-doctor",
+      "stars": 1,
+      "install": "dsh plugin --profile web add @jorinyang/dsh-doctor",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-update-copilot",
+      "owner": "hezhongtang",
+      "url": "https://github.com/hezhongtang/dsh-update-copilot",
+      "page": "https://awesome-dsh-plugin.com/p/hezhongtang/dsh-update-copilot/",
+      "category": "productivity",
+      "description": {
+        "en": "Update copilot for DeepSeek Harness: one scan covers the dsh core, official bundles, and every profile plugin; explains what changed and how risky each update is, then updates only what you confirm.",
+        "zh": "DeepSeek Harness 的更新助手：一次扫描覆盖 dsh 本体、官方 bundle 和每个 profile 的插件，说清改了什么、风险多大，只更新你确认过的那些。"
+      },
+      "npm": "dsh-update-copilot",
+      "stars": 0,
+      "install": "dsh plugin --profile web add dsh-update-copilot",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-skin-manager",
+      "owner": "xiaoyangcheng84-svg",
+      "url": "https://github.com/xiaoyangcheng84-svg/dsh-skin-manager",
+      "page": "https://awesome-dsh-plugin.com/p/xiaoyangcheng84-svg/dsh-skin-manager/",
+      "category": "productivity",
+      "description": {
+        "en": "Skin manager for the DSH web GUI: discovers installed skins and switches the active one from a dedicated Settings page, mutually exclusive, hot-reloaded without restart.",
+        "zh": "DSH Web GUI 皮肤管理器：自动发现已安装皮肤，在独立设置页一键互斥切换，热载入无需重启。"
+      },
+      "npm": null,
+      "stars": 1,
+      "install": "dsh plugin --profile web add github:xiaoyangcheng84-svg/dsh-skin-manager",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-market",
+      "owner": "dsh-market",
+      "url": "https://github.com/dsh-market/dsh-market",
+      "page": "https://awesome-dsh-plugin.com/p/dsh-market/dsh-market/",
+      "category": "market",
+      "description": {
+        "en": "(Recommended) The plugin market inside DSH: a Settings page to browse and search the full community catalog by category, with confirmed one-click installs and an installed-plugins view.",
+        "zh": "（推荐）装在 DSH 里的插件市场：设置页内逛/搜全部社区插件，按分类筛选，确认后一键安装，已装插件一目了然。"
+      },
+      "npm": "dshmarket",
+      "stars": 332,
+      "install": "dsh plugin --profile web add dshmarket",
+      "added": "2026-08-14",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dsh-market/dsh-market/main/assets/demo-en.png",
+        "https://raw.githubusercontent.com/dsh-market/dsh-market/main/assets/themes-en.png"
+      ]
+    },
+    {
+      "name": "dsh-webui-market-plugin",
+      "owner": "Sanqi-normal",
+      "url": "https://github.com/Sanqi-normal/dsh-webui-market-plugin",
+      "page": "https://awesome-dsh-plugin.com/p/Sanqi-normal/dsh-webui-market-plugin/",
+      "category": "market",
+      "description": {
+        "en": "In-harness plugin market for the dsh web GUI: browse the awesome-dsh-plugin.com catalog and install/uninstall plugins into a profile from Settings → Plugins → Plugin Market.",
+        "zh": "dsh Web GUI 内的社区插件市场：浏览 awesome-dsh-plugin.com 目录，从 设置 → 插件 → 插件市场 安装/卸载插件到 profile。"
+      },
+      "npm": "@sanqi-normal/dsh-webui-market-plugin",
+      "stars": 55,
+      "install": "dsh plugin --profile web add @sanqi-normal/dsh-webui-market-plugin",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-plugin-panel",
+      "owner": "Dylan37670",
+      "url": "https://github.com/Dylan37670/dsh-plugin-panel",
+      "page": "https://awesome-dsh-plugin.com/p/Dylan37670/dsh-plugin-panel/",
+      "category": "market",
+      "description": {
+        "en": "In-app DSH plugin marketplace panel with curated and full catalogs, keyword and semantic search, Chinese translation, favorites, installed-state tracking, and install/update/uninstall via the official CLI.",
+        "zh": "DSH 内置插件市场面板：精选与全量目录、关键词与语义搜索、中文翻译、收藏、已安装状态，以及通过官方命令安装、更新和卸载。"
+      },
+      "npm": null,
+      "stars": 1,
+      "install": "dsh plugin --profile web add github:Dylan37670/dsh-plugin-panel",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-devtools",
+      "owner": "izz-BLUE",
+      "url": "https://github.com/izz-BLUE/dsh-devtools",
+      "page": "https://awesome-dsh-plugin.com/p/izz-BLUE/dsh-devtools/",
+      "category": "dev",
+      "description": {
+        "en": "Metadata-first runtime profiler for DSH agents: turn/step traces, model and tool wall-time timelines, provider usage, retries, errors, and live or historical sessions.",
+        "zh": "面向 DSH Agent 的运行时分析器：查看 Turn/Step 轨迹、模型与工具耗时、Provider 用量、重试与错误，实时与历史会话都能看。"
+      },
+      "npm": "dsh-devtools",
+      "stars": 1,
+      "install": "dsh plugin --profile web add dsh-devtools",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "upstream-radar",
+      "owner": "MicroMilo",
+      "url": "https://github.com/MicroMilo/upstream-radar",
+      "page": "https://awesome-dsh-plugin.com/p/MicroMilo/upstream-radar/",
+      "category": "dev",
+      "description": {
+        "en": "Always-on dependency security for DSH plugins: tracks exact installed paths, OSV vulnerabilities, npm releases, and breaking-change signals, then routes project evidence to a DSH Agent.",
+        "zh": "面向 DSH 插件的常驻依赖安全监控：追踪实际安装路径、OSV 漏洞、npm 发布和破坏性更新信号，再把项目证据交给 DSH Agent。"
+      },
+      "npm": "upstream-radar",
+      "stars": 4,
+      "install": "dsh plugin --profile web add upstream-radar",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-check-update",
+      "owner": "HuiHuitie-zhu",
+      "url": "https://github.com/HuiHuitie-zhu/dsh-check-update",
+      "page": "https://awesome-dsh-plugin.com/p/HuiHuitie-zhu/dsh-check-update/",
+      "category": "dev",
+      "description": {
+        "en": "Update checker (npm edition): a settings page comparing local and latest versions of @deepseek-ai/dsh and every installed plugin, with a red-dot nav reminder and ready-made update commands.",
+        "zh": "更新检查器（npm 版）：设置页对比 @deepseek-ai/dsh 与已装插件的本地/最新版本，有更新时导航红点提醒，并直接给出更新命令。"
+      },
+      "npm": "dsh-check-update",
+      "stars": 0,
+      "install": "dsh plugin --profile web add dsh-check-update",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-genie",
+      "owner": "swaylq",
+      "url": "https://github.com/swaylq/dsh-genie",
+      "page": "https://awesome-dsh-plugin.com/p/swaylq/dsh-genie/",
+      "category": "dev",
+      "description": {
+        "en": "Keeps what the agent builds at runtime: turns a `cordis_define` dynamic package into a real installed plugin that survives restart, writing the bundle and registering the profile layer with no pnpm, no network, and no build authorization.",
+        "zh": "把 agent 现场造出来的插件留下来：将 `cordis_define` 的动态包固化成能跨重启存活的正式插件，写包并注册 profile 层的全过程不用 pnpm、不联网、不需要构建授权。"
+      },
+      "npm": null,
+      "stars": 1,
+      "install": "dsh plugin --profile web add github:swaylq/dsh-genie",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-git-hygiene",
+      "owner": "lucky8197",
+      "url": "https://github.com/lucky8197/dsh-git-hygiene",
+      "page": "https://awesome-dsh-plugin.com/p/lucky8197/dsh-git-hygiene/",
+      "category": "dev",
+      "description": {
+        "en": "Git hygiene checker: read-only scan of merged and stale branches, oversized tracked files, untracked files and uncommitted work, with cleanup suggestions (it never deletes anything).",
+        "zh": "Git 卫生巡检：只读扫描已合并/过期分支、大文件、未跟踪文件与未提交修改，输出体检报告与清理建议，不自动删除任何东西。"
+      },
+      "npm": null,
+      "stars": 2,
+      "install": "dsh plugin --profile web add github:lucky8197/dsh-git-hygiene",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-dafeiyu",
+      "owner": "peanut_gao",
+      "url": "https://github.com/peanut_gao/dsh-dafeiyu",
+      "category": "pet",
+      "description": {
+        "en": "A desktop-native BigFish companion driven by DeepSeek Harness session events.",
+        "zh": "桌面原生版 BigFish 伴宠：跟随 DeepSeek Harness 会话事件活动。"
+      },
+      "npm": "dsh-dafeiyu",
+      "stars": 0,
+      "install": "dsh plugin --profile web add dsh-dafeiyu",
+      "added": "2026-08-14",
+      "version": "0.1.0-alpha.6"
+    },
+    {
+      "name": "dsh-plugin-marketplace",
+      "owner": "scorp1o117",
+      "url": "https://github.com/scorp1o117/dsh-plugin-marketplace",
+      "category": "market",
+      "description": {
+        "en": "Built-in plugin market for the DSH Web UI settings page: browse github.com/topics/dsh-plugin, search, sort by stars, see install instructions.",
+        "zh": "DSH Web UI 设置页内置插件市场：直接浏览 github.com/topics/dsh-plugin，支持搜索、按 Star 排序、查看安装方式。"
+      },
+      "npm": "dsh-plugin-marketplace",
+      "stars": 0,
+      "install": "dsh plugin --profile web add dsh-plugin-marketplace",
+      "added": "2026-08-17",
+      "version": "0.2.6"
+    },
+    {
+      "name": "dsh-better-sidebar",
+      "owner": "huanlin",
+      "url": "https://github.com/huanlin/dsh-better-sidebar",
+      "category": "dev",
+      "description": {
+        "en": "A VSCode-like right sidebar (explorer / editor / terminal / git / browser), isolated per conversation session.",
+        "zh": "VSCode 风格右侧边栏：资源管理器 / 编辑器 / 终端 / Git / 浏览器，按会话隔离。"
+      },
+      "npm": "dsh-better-sidebar",
+      "stars": 0,
+      "install": "dsh plugin --profile web add dsh-better-sidebar",
+      "added": "2026-08-16",
+      "version": "0.12.3"
+    }
+  ]
+}
