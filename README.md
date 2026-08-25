@@ -1,8 +1,24 @@
-# Bigfish
+<div align="center">
+
+# Bigfish 🐳
+
+**DeepSeek Harness 的 Electron 桌面版 —— 把 `dsh web` 包进原生桌面窗口。**
+
+免去手动开终端、记端口、开浏览器。装完双击即用。
+
+[下载最新版本](https://github.com/turtle2209/Bigfish/releases) · [版本说明](版本说明.txt) · [使用说明](使用说明.txt) · [已知问题与排查](已知问题与排查.md) · [致谢与合规](THIRD-PARTY-NOTICES.md)
+
+[![GitHub Release](https://img.shields.io/github/v/release/turtle2209/Bigfish?label=Release)](https://github.com/turtle2209/Bigfish/releases) · [![Stars](https://img.shields.io/github/stars/turtle2209/Bigfish?label=Stars)](https://github.com/turtle2209/Bigfish) · [![Downloads](https://img.shields.io/github/downloads/turtle2209/Bigfish/total?label=Downloads)](https://github.com/turtle2209/Bigfish/releases) · [![License](https://img.shields.io/github/license/turtle2209/Bigfish?label=License)](LICENSE)
+
+</div>
+
+![Bigfish 默认背景](assets/background.jpg)
 
 Bigfish 是 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的 Electron 桌面版。
 
 把 `dsh web` 的本地后端 + React UI 包进一个原生桌面窗口，免去手动开终端、记端口、开浏览器。
+
+> 当前版本：`0.1.2` · Windows / macOS / Linux
 
 ## 功能亮点
 
@@ -17,6 +33,16 @@ Bigfish 是 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 
 - **新手向导**：教普通用户注册、充值、填 API Key
 - **故障自助**：后端启动失败时引导「重置插件配置（保留 API Key/会话）」「彻底恢复出厂」
 - 背景图（深/浅色适配 + 自定义背景）、开机自启、Windows 右键「用 Bigfish 打开」
+
+## 截图
+
+| 鲸鱼娘桌宠 | 兑换屋 |
+| --- | --- |
+| ![鲸鱼娘桌宠](https://github.com/user-attachments/assets/529ff426-faab-4919-a031-6299927bf6dd) | ![兑换屋](https://github.com/user-attachments/assets/e2cb1fa1-fb06-4d1c-b084-81014b4d1fef) |
+
+| 模式选择 |
+| --- |
+| ![专注模式/鲸鱼模式](https://github.com/user-attachments/assets/90efad2e-c325-49b2-9ff3-abcc3dce3d85) |
 
 ## 工作原理
 
